@@ -4,7 +4,7 @@
 
 This repository contains the R code and all the documentation files usefull in this project from the Coursera Data Science's track course "Getting and Cleaning data".
 
-The project is based on resarch data available at: [Human Activity Recognition Using Smartphones]
+The project is based on data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at: 
 (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 The data package can be downloaded at: (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
