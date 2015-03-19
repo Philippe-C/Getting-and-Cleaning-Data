@@ -1,6 +1,6 @@
-# From the raw data to the final Tidy data
+# From The Raw Data To The Final Tidy Data
 
-The code presented in `run_analysis.R` follows 5 steps defined in the ReadMe file.
+The code presented in `run_analysis.R` follows 5 steps defined also in the `ReadMe` file.
 
 Practically, the process involves:
 
@@ -12,11 +12,11 @@ Practically, the process involves:
 
 The output file is called `Tidy_AveragesData.txt`, you will find it uploaded in this repository.
 
-# List of Variables used in this project
+# List of Variables Used In This Project
 
 - `x_train`, `y_train`, `x_test`, `y_test`, `subject_train` and `subject_test` are extracted from the downloaded files.
 - `x_data`, `y_data` and `subject_data` are merged and used in  further analysis.
 - `features` is a text file containing the correct names for the `x_data` data set, which are applied to the column names stored in `ColumnsWanted` (i.e. mean and standard deviation measures), a numeric vector used to extract the desired data.
 - We proceed using the same logic with activity names, through the `activities` variable.
-- `MergedData` regroup `x_data`, `y_data` and `subject_data` in a big dataset (using the 'cbind()' function.
-- The last variable `AveragesData` contains the relevant averages ultimately stored in a the 'Tidy_AveragesData.txt` file. Please note that we have used the `ddply()` function from the plyr package in order to apply the `colMeans()` function easily.
+- `MergedData` regroup `x_data`, `y_data` and `subject_data` in a big dataset (using the 'cbind()' function).
+- The last variable `AveragesData` contains the relevant averages ultimately stored in a the `Tidy_AveragesData` text file. Please note that we have used the `ddply()` function from the plyr package in order to apply the `colMeans()` function easily.
