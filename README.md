@@ -1,13 +1,14 @@
-# Getting-and-Cleaning-Data: Project with peer assesment
+# Getting-and-Cleaning-Data: 
+
+Project with peer assesment
 
 # Introduction 
 
 This repository contains the R code and all the documentation files usefull in this project from the Coursera Data Science's track course "Getting and Cleaning data".
 
-The project is based on data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at: 
-(http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+The project is based on data collected from the accelerometers embedded in the Samsung Galaxy S smartphone. A full description is available at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The data package can be downloaded at: (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+The data package can be downloaded at: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ## Purpose of the project
 
@@ -35,7 +36,7 @@ Caution: we assume that you have saved the R code in your working directory befo
 
 `CodeBook.md` describes the variables, the data, and any transformations or work that was performed to clean up the data.
 
-# The final output
+# The final output of the project
 
 The file `Tidy_AveragesData.txt` presents the requested TIDY data set and is naturally included in this repository.
 
