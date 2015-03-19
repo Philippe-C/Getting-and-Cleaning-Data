@@ -6,17 +6,21 @@ Project with peer assesment
 
 This repository contains the R code and all the documentation files usefull in this project from the Coursera Data Science's track course "Getting and Cleaning data".
 
-The project is based on data collected from the accelerometers embedded in the Samsung Galaxy S smartphone. A full description is available at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The project is based on data collected from the accelerometers embedded in the Samsung Galaxy S smartphone. A full description is available at:
 
-The data package can be downloaded at: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The data package can be downloaded at:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ## Purpose of the project
 
-Demonstrate the ability to collect, work with, and clean a data set. The goal is to prepare TIDY data that can be used for later analysis.
+- Demonstrate the ability to collect, work with, and clean a data set. The goal is to prepare TIDY data that can be used for later analysis.
 
-A TIDY data set is characterized by the fact that each variable you measure should be in one column and Each different observation of that variable should be in a different row.
+- Important: A TIDY data set is characterized by the fact that each variable you measure should be in one column and Each different observation of that variable should be in a different row.
 
-Create one R script called run_analysis.R that does the following: 
+- Create one R script called run_analysis.R that does the following: 
 
 1. Merges the training and the test sets to create one data set.
 
@@ -31,9 +35,10 @@ Create one R script called run_analysis.R that does the following:
 ## Main files for the project
 
 Caution: we assume that you have saved the R code in your working directory before using it!
-Note: the code itself contains comments of the differents steps required.
 
 `run_analysis.R`: Allows to proceed with the 5 steps defined above. In RStudio, you can launch the code with the R command `source ("run_analysis.R")`.
+
+Note: the code itself contains comments of the differents steps required. Have a look!
 
 `CodeBook.md`: Contains the list of variables used but also describes the process permitting to clean up the data.
 
