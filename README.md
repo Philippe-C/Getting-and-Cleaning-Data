@@ -46,3 +46,4 @@ Note: the code itself contains comments of the differents steps required. Have a
 
 The file `Tidy_AveragesData.txt` presents the requested TIDY data set and is naturally included in this repository.
 
+
