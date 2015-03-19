@@ -30,9 +30,10 @@ Create one R script called run_analysis.R that does the following:
 
 ## Main files for the project
 
-Caution: we assume that you have saved the R code in your working directory before using it !
+Caution: we assume that you have saved the R code in your working directory before using it!
+Note: the code itself contains comments of the differents steps required.
 
-`run_analysis.R`: Allows to proceed with the 5 steps defined above. In RStudio, you can launch the code with the command source("run_analysis.R").
+`run_analysis.R`: Allows to proceed with the 5 steps defined above. In RStudio, you can launch the code with the R command `source ("run_analysis.R")`.
 
 `CodeBook.md`: Contains the list of variables used but also describes the process permitting to clean up the data.
 
