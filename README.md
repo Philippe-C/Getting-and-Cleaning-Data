@@ -28,13 +28,13 @@ Create one R script called run_analysis.R that does the following:
 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-### Main files for the project
+## Main files for the project
 
 Caution: we assume that you have saved the R code in your working directory before using it !
 
 `run_analysis.R`: Allows to proceed with the 5 steps defined above. In RStudio, you can launch the code with the command source("run_analysis.R").
 
-`CodeBook.md` describes the variables, the data, and any transformations or work that was performed to clean up the data.
+`CodeBook.md`: Contains the list of variables used but also describes the process permitting to clean up the data.
 
 # The final output of the project
 
