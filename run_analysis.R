@@ -1,22 +1,23 @@
+### If you have not yet install the package plyr:  ###
+###  install.packages("plyr")
+
 library(plyr)
 
-######################            Accessing the Data               ##################################
+###  Accessing the Data  ###
+# CAUTION: We assume that you have saved "run_analysis.R" in your working dirctory !!!
 
 # Download the data set at the following address
 if (!file.exists("projectdata.zip")) {
         download.file(url = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", destfile = "projectdata.zip", method = "curl")
 }
 
-# Unzip the dataget
+# Unzip the dataset
 if (!file.exists("UCI HAR Dataset")) {
         unzip("projectdata.zip")
 }
 
-####################################################################################################
-
-# Step 1
+# STEP 1
 # Merge the training and test sets to create one data set
-###############################################################################
 
 x_train <- read.table("UCI HAR Dataset/train/X_train.txt")
 y_train <- read.table("UCI HAR Dataset/train/y_train.txt")
@@ -26,59 +27,56 @@ x_test <- read.table("UCI HAR Dataset/test/X_test.txt")
 y_test <- read.table("UCI HAR Dataset/test/y_test.txt")
 subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt")
 
-# create 'x' data set
+# Creating the 'x' data set
 x_data <- rbind(x_train, x_test)
 
-# create 'y' data set
+# CreatING the 'y' data set
 y_data <- rbind(y_train, y_test)
 
-# create 'subject' data set
+# CreatING the 'subject' data set
 subject_data <- rbind(subject_train, subject_test)
 
-# Step 2
-# Extract only the measurements on the mean and standard deviation for each measurement
-###############################################################################
+## STEP 2
+## Extract only the measurements on the mean and standard deviation for each measurement
 
 Features <- read.table("UCI HAR Dataset/features.txt")
 
-# get only columns with mean() or std() in their names
+# We want only the columns including mean() or std() in their names
 ColumnsWanted <- grep("-(mean|std)\\(\\)", Features[, 2])
 
-# subset the desired columns
+# We subset these specific columns
 x_data <- x_data[, ColumnsWanted]
 
-# correct the column names
+# We correct the columns names
 names(x_data) <- Features[ColumnsWanted, 2]
 
-# Step 3
-# Use descriptive activity names to name the activities in the data set
-###############################################################################
+### STEP 3
+### Use descriptive activity names to name the activities in the data set
 
 Activities <- read.table("UCI HAR Dataset/activity_labels.txt")
 
-# update values with correct activity names
+# We update all values with correct activity names
 y_data[, 1] <- Activities[y_data[, 1], 2]
 
-# correct column name
+# We correct the column name
 names(y_data) <- "activity"
 
-# Step 4
-# Appropriately label the data set with descriptive variable names
-###############################################################################
+#### STEP 4
+#### Appropriately label the data set with descriptive variable names
 
-# correct column name
+# We correct the column name
 names(subject_data) <- "subject"
 
-# bind all the data in a single data set
+# We merge all the data in a single data set
 MergedData <- cbind(x_data, y_data, subject_data)
 
-# Step 5
-# Create a second, independent tidy data set with the average of each variable
-# for each activity and each subject
-###############################################################################
+##### STEP 5
+##### Create a second, independent tidy data set with the average of each variable
+##### for each activity and each subject
 
-# 66 <- 68 columns but last two (activity & subject)
 AveragesData <- ddply(MergedData, .(subject, activity), function(x) colMeans(x[, 1:66]))
+
+###   the requested Tidy data are given in the .txt file defined below  ###
 
 write.table(AveragesData, "Tidy_AveragesData.txt", row.name=FALSE)
 
